@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<table>
+    <tbody>
+    <tr th:each="info: ${allInfo}">
+        <td th:text="${info.id}"></td>
+        <td th:text="${info.name}"></td>
+        <td th:text="${info.surname}"></td>
+        <td th:text="${info.adress}"></td>
+        <td th:text="${info.waterUsage}"></td>
+        <td th:text="${info.yardage}"></td>
+        <td th:text="${info.howManyPeople}"></td>
+        <td th:text="${info.type}"></td>
+        <td th:text="${info.recycling}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
