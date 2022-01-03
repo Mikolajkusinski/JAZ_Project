@@ -34,11 +34,11 @@ public class InfoService {
     }
 
     public void insertInfoInToRepo(InfoAboutClient infoAboutClient){
-        Optional<InfoAboutClient> infoFromRepo = infoRepository.findById(infoAboutClient.getId());
+//        Optional<InfoAboutClient> infoFromRepo = infoRepository.findById(infoAboutClient.getId());
 
-        if(infoFromRepo != null){
-            throw new InfoAlreadyExistException();
-        }
+//        if(infoFromRepo != null){
+//            throw new InfoAlreadyExistException();
+//        }
 
         infoRepository.save(infoAboutClient);
     }
