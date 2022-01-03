@@ -20,7 +20,7 @@ public class InfoAboutClient {
     private String Name;
     private String Surname;
     private String Adress;
-    private Long waterUsage;
+    private double waterUsage;
     private double yardage;
     private int howManyPeople;
     private TypeOfBuldingEnum type;
@@ -31,7 +31,7 @@ public class InfoAboutClient {
     public InfoAboutClient() {
     }
 
-    public InfoAboutClient(String name, String surname, String adress, Long waterUsage, double yardage, int howManyPeople, TypeOfBuldingEnum type, boolean recycling) {
+    public InfoAboutClient(String name, String surname, String adress, double waterUsage, double yardage, int howManyPeople, TypeOfBuldingEnum type, boolean recycling) {
         Name = name;
         Surname = surname;
         Adress = adress;
@@ -42,19 +42,8 @@ public class InfoAboutClient {
         this.recycling = recycling;
     }
 
-    public InfoAboutClient(Long id, String name, String surname, String adress, Long waterUsage, double yardage, int howManyPeople, TypeOfBuldingEnum type, boolean recycling) {
-        this.id = id;
-        Name = name;
-        Surname = surname;
-        Adress = adress;
-        this.waterUsage = waterUsage;
-        this.yardage = yardage;
-        this.howManyPeople = howManyPeople;
-        this.type = type;
-        this.recycling = recycling;
-    }
 
-    public InfoAboutClient(String name, String surname, String adress, Long waterUsage, double yardage, int howManyPeople, TypeOfBuldingEnum type, boolean recycling, double finalPrice) {
+    public InfoAboutClient(String name, String surname, String adress, double waterUsage, double yardage, int howManyPeople, TypeOfBuldingEnum type, boolean recycling, double finalPrice) {
         Name = name;
         Surname = surname;
         Adress = adress;

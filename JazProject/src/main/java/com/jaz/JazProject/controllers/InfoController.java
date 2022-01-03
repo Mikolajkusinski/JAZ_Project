@@ -38,7 +38,7 @@ public class InfoController {
     public String submitMainForm(@ModelAttribute InfoAboutClient infoAboutClient){
         infoService.insertInfoInToRepo(infoAboutClient);
 
-        return "redirect: /test";
+        return "redirect:/test";
     }
 
 }
