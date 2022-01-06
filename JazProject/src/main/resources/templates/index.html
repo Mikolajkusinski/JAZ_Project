@@ -7,6 +7,18 @@
 <body>
 <table>
     <tbody>
+    <tr>
+        <td><label>Id</label></td>
+        <td><label>Name</label></td>
+        <td><label>Surname</label></td>
+        <td><label>Address</label></td>
+        <td><label>Water Usage</label></td>
+        <td><label>Yardage</label></td>
+        <td><label>How many people</label></td>
+        <td><label>Type</label></td>
+        <td><label>Recycling</label></td>
+        <td><label>Final price</label></td>
+    </tr>
     <tr th:each="info: ${allInfo}">
         <td th:text="${info.id}"></td>
         <td th:text="${info.name}"></td>
@@ -17,8 +29,18 @@
         <td th:text="${info.howManyPeople}"></td>
         <td th:text="${info.type}"></td>
         <td th:text="${info.recycling}"></td>
+        <td th:text="${info.finalPrice}"></td>
     </tr>
     </tbody>
+    <form method="post" th:action="@{/test}" th:object="${idHolder}">
+        <table>
+            <tr>
+                <td><label>Delete info :</label></td>
+                <td><input type="number" th:field="${idHolder.id}" min="0"></td>
+                <td><input type="submit" value="Delete"></td>
+            </tr>
+        </table>
+    </form>
 </table>
 </body>
 </html>

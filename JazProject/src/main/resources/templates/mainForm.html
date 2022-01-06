@@ -34,14 +34,18 @@
         <tr>
             <td><label>Type of building</label></td>
             <td><input type="radio" name="b" th:field="${infoAboutClient.type}" value="FLAT" />Flat</td>
-            <td><input type="radio" name="b" th:field="${infoAboutClient.type}" value="DETACHED_HOUSE" />Detached house</td>
+            <td><input type="radio" name="b" th:field="${infoAboutClient.type}" value="DETACHED_HOUSE" checked="checked" />Detached house</td>
         </tr>
         <tr>
             <td><label>Do you recycle?</label></td>
             <td><input type="radio" name="r" th:field="${infoAboutClient.recycling}" value="true" />Yes</td>
             <td><input type="radio" name="r" th:field="${infoAboutClient.recycling}" value="false" />No</td>
         </tr>
-        <tr><td><input type="submit" value="submit"/></td></tr>
+        <tr><td><input type="submit" value="Submit"/></td></tr>
+        <tr>
+           <td th:text = "${finalP}" ></td>
+            <td th:text = "${tekst}"></td>
+        </tr>
     </table>
 </form>
 </body>
