@@ -34,16 +34,19 @@ public class InfoService {
     }
 
     public void insertInfoInToRepo(InfoAboutClient infoAboutClient){
-//        Optional<InfoAboutClient> infoFromRepo = infoRepository.findById(infoAboutClient.getId());
-
-//        if(infoFromRepo != null){
-//            throw new InfoAlreadyExistException();
-//        }
 
         infoRepository.save(infoAboutClient);
     }
 
     public List<InfoAboutClient> getAllInfoFromRepo(){return infoRepository.findAll();}
 
-    public void deleteInfo(String id){infoRepository.delete(infoRepository.findById(Long.parseLong(id)));}
+    public void deleteInfo(String id){
+        InfoAboutClient infoAboutClient = infoRepository.findById(Long.parseLong(id));
+
+        if(infoAboutClient == null){
+            throw new InfoNotFoundException();
+        }
+
+        infoRepository.delete(infoAboutClient);
+    }
 }
