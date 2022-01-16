@@ -1,0 +1,28 @@
+
+#title{
+    font-size: 300%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#formTb{
+    border-spacing: 25px;
+    font-size: 120%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#button{
+    font-size: 130%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-left: 100%;
+    margin-right: 50%;
+}
+#finalp{
+    text-align: right;
+}
+

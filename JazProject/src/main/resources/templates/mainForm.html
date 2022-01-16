@@ -2,12 +2,14 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Sprawdź ile zapłacisz za śmieci</title>
+    <title>Check how much you will pay for your garbage</title>
+    <link rel="stylesheet" th:href="@{/styles2.css}">
 </head>
 <body>
+<h4 id="title">Check how much you will pay for your garbage</h4>
 <form method="post" th:action="@{/check_your_fees}" th:object="${infoAboutClient}">
-    <table>
-        <tr>
+    <table id="formTb">
+        <tr >
             <td><label>Name</label></td>
             <td><input type="text" th:field="${infoAboutClient.name}" required/></td>
         </tr>
@@ -19,7 +21,7 @@
             <td><label>Address</label></td>
             <td><input type="text" th:field="${infoAboutClient.adress}" required placeholder="City, street"/></td>
         </tr>
-        <tr>
+        <tr >
             <td><label>Water Usage</label></td>
             <td><input type="number" th:field="${infoAboutClient.waterUsage}" min="0" required placeholder="monthly water usage"/> m3</td>
         </tr>
@@ -27,23 +29,23 @@
             <td><label>Yardage</label></td>
             <td><input type="number" th:field="${infoAboutClient.yardage}" min="0" required/> m2</td>
         </tr>
-        <tr>
+        <tr >
             <td><label>How many people live in a building?</label></td>
             <td><input type="number" th:field="${infoAboutClient.howManyPeople}" min="0" required /></td>
         </tr>
-        <tr>
+        <tr >
             <td><label>Type of building</label></td>
             <td><input type="radio" name="b" th:field="${infoAboutClient.type}" value="FLAT" />Flat</td>
-            <td><input type="radio" name="b" th:field="${infoAboutClient.type}" value="DETACHED_HOUSE" checked="checked" />Detached house</td>
+            <td><input type="radio" name="b" th:field="${infoAboutClient.type}" value="DETACHED_HOUSE"  />Detached house</td>
         </tr>
-        <tr>
+        <tr >
             <td><label>Do you recycle?</label></td>
             <td><input type="radio" name="r" th:field="${infoAboutClient.recycling}" value="true" />Yes</td>
             <td><input type="radio" name="r" th:field="${infoAboutClient.recycling}" value="false" />No</td>
         </tr>
-        <tr><td><input type="submit" value="Submit"/></td></tr>
+        <tr><td><input type="submit" value="Submit" id="button"/></td></tr>
         <tr>
-           <td th:text = "${finalP}" ></td>
+           <td id="finalp" th:text = "${finalP}" ></td>
             <td th:text = "${tekst}"></td>
         </tr>
     </table>
