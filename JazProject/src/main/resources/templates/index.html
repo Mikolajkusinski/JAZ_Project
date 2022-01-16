@@ -2,12 +2,13 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>Administration panel</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
 </head>
 <body>
-<table>
+<table >
     <tbody>
-    <tr>
+    <tr id="uprow">
         <td><label>Id</label></td>
         <td><label>Name</label></td>
         <td><label>Surname</label></td>
@@ -19,7 +20,7 @@
         <td><label>Recycling</label></td>
         <td><label>Final price</label></td>
     </tr>
-    <tr th:each="info: ${allInfo}">
+    <tr th:each="info: ${allInfo}" id="downrow">
         <td th:text="${info.id}"></td>
         <td th:text="${info.name}"></td>
         <td th:text="${info.surname}"></td>
@@ -32,15 +33,15 @@
         <td th:text="${info.finalPrice}"></td>
     </tr>
     </tbody>
-    <form method="post" th:action="@{/test}" th:object="${idHolder}">
-        <table>
-            <tr>
-                <td><label>Delete info :</label></td>
-                <td><input type="number" th:field="${idHolder.id}" min="0"></td>
-                <td><input type="submit" value="Delete"></td>
-            </tr>
-        </table>
-    </form>
 </table>
+<form method="post" th:action="@{/test}" th:object="${idHolder}" id="deleteTable">
+    <table>
+        <tr>
+            <td><label>Delete info :</label></td>
+            <td><input type="number" th:field="${idHolder.id}" min="0"></td>
+            <td><input type="submit" value="Delete"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

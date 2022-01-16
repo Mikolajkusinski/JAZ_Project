@@ -48,7 +48,7 @@ public class InfoController {
         infoAboutClient.setFinalPrice(CountingAlgorythm.countFees(infoAboutClient));
 
         model.addAttribute("finalP",CountingAlgorythm.countFees(infoAboutClient));
-        model.addAttribute("tekst",new String(" zl to szacowana naleznosc do zaplaty"));
+        model.addAttribute("tekst",new String("zl to szacowana naleznosc do zaplaty"));
 
         infoService.insertInfoInToRepo(infoAboutClient);
 

@@ -1,0 +1,11 @@
+#uprow{
+    background-color: burlywood;
+    text-indent: 50px;
+}
+#downrow{
+    background-color: lightgray;
+    text-align: right;
+}
+#deleteTable{
+    padding-top: 50px;
+}

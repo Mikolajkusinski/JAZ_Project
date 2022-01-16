@@ -19,8 +19,6 @@ public class InfoService {
     @Autowired
     public InfoService(InfoRepository infoRepository) {
         this.infoRepository = infoRepository;
-
-        infoRepository.save(new InfoAboutClient("test","test","test",99L,111,11, TypeOfBuldingEnum.FLAT,true));
     }
 
     public InfoAboutClient getInfoFromRepo(String id){
@@ -34,7 +32,6 @@ public class InfoService {
     }
 
     public void insertInfoInToRepo(InfoAboutClient infoAboutClient){
-
         infoRepository.save(infoAboutClient);
     }
 
